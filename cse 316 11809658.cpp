@@ -17,6 +17,7 @@ void faculty_Queue(int no_of_process) {
     for(count = 0; count < no_of_process; count++) {
         printf("Enter the details of Process[%d]", count+1);
         puts("");
+        printf("\n")
         printf("Enter Process Name : ");
         scanf("%s", faculty_Process[count].process_name);
  
@@ -55,7 +56,8 @@ void faculty_Queue(int no_of_process) {
     round_robin[queue] = 0;
  
    
-    int flag, x, n, z, waiting_time = 0;
+    int flag, x, n, z;
+    int waiting_time = 0;
     do {
         for(count = 0; count < no_of_process; count++){
             if(total_time >= faculty_Process[count].arrival_time){
